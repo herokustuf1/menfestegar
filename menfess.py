@@ -14,7 +14,7 @@ try:
 	import time
 	import os
 	import json
-	from dotenv import load_dotenv
+	from config import config.env
 	from telebot import types
 except:
 	print("error! install dulu pytelegrambotapi dengan cara 'pip install pytelegrambotapi'")
