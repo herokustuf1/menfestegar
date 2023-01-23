@@ -14,7 +14,7 @@ try:
 	import time
 	import os
 	import json
-	from config import config.env
+	from dotenv import load_dotenv
 	from telebot import types
 except:
 	print("error! install dulu pytelegrambotapi dengan cara 'pip install pytelegrambotapi'")
@@ -25,12 +25,12 @@ load_dotenv()
 
 
 
-token = os.getenv("BOT_TOKEN")
-ch = os.getenv("CHANNEL")
-link = os.getenv("LINK")
-admin = json.loads(os.getenv("ADMIN"))
-trigger = json.loads(os.getenv("TAG"))
-delay = os.getenv("DELAY")
+token = os.getenv("BOT_TOKEN", "5862301342:AAEIs8xVaWPG03KC-GWVmas-8eLFEraxUFA")
+ch = os.getenv("CHANNEL", "-1001867073232")
+link = os.getenv("t.me/xtafes")
+admin = json.loads(os.getenv("ADMIN", "1620434318, 5615921474"))
+trigger = json.loads(os.getenv("TAG", "#spill", "#random", "#curhat", "#ask", "#jokes"))
+delay = os.getenv("DELAY", "60")
 mulai = '''
 Selamat Datang Di *Xtafes*
 
